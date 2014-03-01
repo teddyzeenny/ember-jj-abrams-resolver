@@ -4,7 +4,7 @@ var resolver,
     containerDebugAdapter,
     App, get = Ember.get,
     set = Ember.set,
-    Resolver = require('resolver'),
+    Resolver = require('ember/resolver'),
     ContainerDebugAdapter = require('container-debug-adapter'),
     Model = Ember.Object.extend();
 
