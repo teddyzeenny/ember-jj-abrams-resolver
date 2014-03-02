@@ -63,14 +63,15 @@ define("ember/container-debug-adapter",
       for(var key in entries) {
         if(entries.hasOwnProperty(key) && key.indexOf(type) !== -1)
         {
-          // TODO return the name instead of the module itself
-          module = require(key, null, null, true);
+          // // TODO return the name instead of the module itself
+          // module = require(key, null, null, true);
 
-          if (module && module['default']) { module = module['default']; }
-          module.shortname = key.split(type +'s/').pop();
-          module.toString = makeToString;
+          // if (module && module['default']) { module = module['default']; }
+          // module.shortname = key.split(type +'s/').pop();
+          // module.toString = makeToString;
 
-          types.push(module);
+          // types.push(module);
+          types.push(key.split(type +'s/').pop());
         }
       }
 

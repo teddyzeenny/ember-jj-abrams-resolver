@@ -53,5 +53,5 @@ test("the default ContainerDebugAdapter catalogs controller entries", function()
   var controllerClasses = containerDebugAdapter.catalogEntriesByType('controller');
 
   equal(controllerClasses.length, 1, "found 1 class");
-  equal(controllerClasses[0].shortname, 'foo', "found the right class");
+  equal(controllerClasses[0], 'foo', "found the right class");
 });
