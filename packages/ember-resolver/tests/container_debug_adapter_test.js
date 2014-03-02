@@ -5,8 +5,9 @@ var resolver,
     App, get = Ember.get,
     set = Ember.set,
     Resolver = require('ember/resolver'),
-    ContainerDebugAdapter = require('container-debug-adapter'),
+    ContainerDebugAdapter = require('ember/container-debug-adapter'),
     Model = Ember.Object.extend();
+
 
 module("Container Debug Adapter Tests", {
   setup:function() {
@@ -22,7 +23,9 @@ module("Container Debug Adapter Tests", {
         ContainerDebugAdapter: ContainerDebugAdapter['default']
       }).create();
 
-      App.__container__.register('container-debug-adapter:main', ContainerDebugAdapter);
+      // App.__container__.register('container-debug-adapter:main', ContainerDebugAdapter);
+    });
+    Ember.run(function() {
       containerDebugAdapter = App.__container__.lookup('container-debug-adapter:main');
     });
   },

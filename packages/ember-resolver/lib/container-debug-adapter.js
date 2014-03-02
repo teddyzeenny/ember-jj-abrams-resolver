@@ -1,6 +1,6 @@
 /*globals define registry requirejs */
 
-define("container-debug-adapter",
+define("ember/container-debug-adapter",
   [],
   function() {
     "use strict";
